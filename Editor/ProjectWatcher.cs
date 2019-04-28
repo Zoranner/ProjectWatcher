@@ -4,9 +4,9 @@
 // Datetime: 2018-07-18 22:55:37
 //============================================================
 
+#if WATCH_DOG
 namespace Zoranner.ProjectWatcher
 {
-#if WATCH_DOG
     public enum MainDirectory
     {
         Arts,
@@ -19,7 +19,8 @@ namespace Zoranner.ProjectWatcher
 
     public enum ArtsDirectory
     {
-        Animates,
+        Animations,
+        Animators,
         Audios,
         Materials,
         Meshes,
@@ -32,6 +33,7 @@ namespace Zoranner.ProjectWatcher
         Skyboxes,
         Terrains,
         Textures,
+        Timelines,
         Videos,
     }
 
@@ -66,5 +68,5 @@ namespace Zoranner.ProjectWatcher
         Bundles,
         Configs
     }
-#endif
 }
+#endif

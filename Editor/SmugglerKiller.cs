@@ -4,6 +4,7 @@
 // Datetime: 2018-07-18 22:59:48
 //============================================================
 
+#if WATCH_DOG
 using System;
 using System.Collections;
 using System.IO;
@@ -14,7 +15,6 @@ using UnityEngine;
 
 namespace Zoranner.ProjectWatcher
 {
-#if WATCH_DOG
     [InitializeOnLoad]
     [UsedImplicitly]
     public class SmugglerKiller
@@ -44,8 +44,21 @@ namespace Zoranner.ProjectWatcher
         {
             if (!EditorApplication.isPlayingOrWillChangePlaymode)
             {
+                //var mainPath = Application.dataPath;
                 new Thread(() =>
                 {
+                    //var artsPath = string.Format("{0}/Arts", mainPath);
+                    //var resourcesPath = string.Format("{0}/Resources", mainPath);
+                    //var scriptsPath = string.Format("{0}/Scripts", mainPath);
+                    //var masterPath = string.Format("{0}/Scripts/Master", mainPath);
+                    //var streamingAssetsPath = string.Format("{0}/Scripts/Master", mainPath);
+                    //var mainInfo = new DirectoryInfo(mainPath);
+                    //var artsInfo = new DirectoryInfo(artsPath);
+                    //var resourcesInfo = new DirectoryInfo(resourcesPath);
+                    //var scriptsInfo = new DirectoryInfo(scriptsPath);
+                    //var masterInfo = new DirectoryInfo(masterPath);
+                    //var streamingAssetsInfo = new DirectoryInfo(streamingAssetsPath);
+
                     if (_MainInfo.Exists)
                     {
                         foreach (var childInfo in _MainInfo.GetDirectories())
@@ -191,5 +204,5 @@ namespace Zoranner.ProjectWatcher
         //    AssetDatabase.Refresh();
         //}
     }
-#endif
 }
+#endif

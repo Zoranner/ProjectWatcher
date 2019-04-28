@@ -127,6 +127,7 @@ namespace Zoranner.ProjectWatcher
                         }
                     }
                 }).Start();
+#elif WATCH_DOG_DEAD
 #else
             var targets = Enum.GetValues(typeof(BuildTargetGroup))
                 .Cast<BuildTargetGroup>()
@@ -157,6 +158,7 @@ namespace Zoranner.ProjectWatcher
         }
 
 #if WATCH_DOG
+#elif WATCH_DOG_DEAD
 #else
         private static bool IsObsolete(BuildTargetGroup group)
         {

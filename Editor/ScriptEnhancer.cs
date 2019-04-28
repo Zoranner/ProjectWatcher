@@ -4,6 +4,7 @@
 // Datetime: 2018-07-18 15:32:14
 //============================================================
 
+#if WATCH_DOG
 using System;
 using System.IO;
 using System.Text;
@@ -58,3 +59,4 @@ namespace Zoranner.ProjectWatcher
         }
     }
 }
+#endif

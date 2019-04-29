@@ -58,6 +58,7 @@ namespace Zoranner.ProjectWatcher
 
     public enum MasterDirectory
     {
+        Connect,
         Coupler,
         Function,
         Interface

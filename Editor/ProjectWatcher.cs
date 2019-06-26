@@ -22,6 +22,7 @@ namespace Zoranner.ProjectWatcher
         Animations,
         Animators,
         Audios,
+        Effects,
         Materials,
         Meshes,
         Models,

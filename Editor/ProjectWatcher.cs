@@ -23,6 +23,7 @@ namespace Zoranner.ProjectWatcher
         Animators,
         Audios,
         Effects,
+        Fonts,
         Materials,
         Meshes,
         Models,
@@ -43,6 +44,7 @@ namespace Zoranner.ProjectWatcher
         Animations,
         Audios,
         Materials,
+        Meshes,
         Prefabs,
         Profiles,
         Skyboxes,
@@ -54,7 +56,8 @@ namespace Zoranner.ProjectWatcher
     {
         Editor,
         Kernel,
-        Master
+        Master,
+        Tester
     }
 
     public enum MasterDirectory
@@ -68,7 +71,8 @@ namespace Zoranner.ProjectWatcher
     public enum StreamingAssetsDirectory
     {
         Bundles,
-        Configs
+        Configs,
+        Others
     }
 }
 #endif

@@ -20,11 +20,11 @@ namespace Zoranner.ProjectWatcher
     public class SmugglerKiller
     {
         private static readonly string _MainPath = Application.dataPath;
-        private static readonly string _ArtsPath = string.Format("{0}/Arts", _MainPath);
-        private static readonly string _ResourcesPath = string.Format("{0}/Resources", _MainPath);
-        private static readonly string _ScriptsPath = string.Format("{0}/Scripts", _MainPath);
-        private static readonly string _MasterPath = string.Format("{0}/Scripts/Master", _MainPath);
-        private static readonly string _StreamingAssetsPath = string.Format("{0}/StreamingAssets", _MainPath);
+        private static readonly string _ArtsPath = $"{_MainPath}/Arts";
+        private static readonly string _ResourcesPath = $"{_MainPath}/Resources";
+        private static readonly string _ScriptsPath = $"{_MainPath}/Scripts";
+        private static readonly string _MasterPath = $"{_MainPath}/Scripts/Master";
+        private static readonly string _StreamingAssetsPath = $"{_MainPath}/StreamingAssets";
         private static readonly DirectoryInfo _MainInfo = new DirectoryInfo(_MainPath);
         private static readonly DirectoryInfo _ArtsInfo = new DirectoryInfo(_ArtsPath);
         private static readonly DirectoryInfo _ResourcesInfo = new DirectoryInfo(_ResourcesPath);
@@ -66,9 +66,8 @@ namespace Zoranner.ProjectWatcher
                             if (!(Enum.GetNames(typeof(MainDirectory)) as IList).Contains(childInfo.Name))
                             {
                                 //childInfo.Delete(true);
-                                Debug.LogError(string.Format(
-                                    "发现不规范资源目录[Assets/{0}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。",
-                                    childInfo.Name));
+                                Debug.LogError(
+                                    $"发现不规范资源目录[Assets/{childInfo.Name}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。");
                             }
                         }
                     }
@@ -80,9 +79,8 @@ namespace Zoranner.ProjectWatcher
                             if (!(Enum.GetNames(typeof(ArtsDirectory)) as IList).Contains(childInfo.Name))
                             {
                                 //childInfo.Delete(true);
-                                Debug.LogError(string.Format(
-                                    "发现不规范资源目录[Assets/Arts/{0}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。",
-                                    childInfo.Name));
+                                Debug.LogError(
+                                    $"发现不规范资源目录[Assets/Arts/{childInfo.Name}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。");
                             }
                         }
                     }
@@ -94,9 +92,8 @@ namespace Zoranner.ProjectWatcher
                             if (!(Enum.GetNames(typeof(ResourcesDirectory)) as IList).Contains(childInfo.Name))
                             {
                                 //childInfo.Delete(true);
-                                Debug.LogError(string.Format(
-                                    "发现不规范资源目录[Assets/Resources/{0}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。",
-                                    childInfo.Name));
+                                Debug.LogError(
+                                    $"发现不规范资源目录[Assets/Resources/{childInfo.Name}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。");
                             }
                         }
                     }
@@ -108,9 +105,8 @@ namespace Zoranner.ProjectWatcher
                             if (!(Enum.GetNames(typeof(ScriptsDirectory)) as IList).Contains(childInfo.Name))
                             {
                                 //childInfo.Delete(true);
-                                Debug.LogError(string.Format(
-                                    "发现不规范资源目录[Assets/Scripts/{0}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。",
-                                    childInfo.Name));
+                                Debug.LogError(
+                                    $"发现不规范资源目录[Assets/Scripts/{childInfo.Name}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。");
                             }
                         }
                     }
@@ -122,9 +118,8 @@ namespace Zoranner.ProjectWatcher
                             if (!(Enum.GetNames(typeof(MasterDirectory)) as IList).Contains(childInfo.Name))
                             {
                                 //childInfo.Delete(true);
-                                Debug.LogError(string.Format(
-                                    "发现不规范资源目录[Assets/Scripts/Master/{0}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。",
-                                    childInfo.Name));
+                                Debug.LogError(
+                                    $"发现不规范资源目录[Assets/Scripts/Master/{childInfo.Name}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。");
                             }
                         }
                     }
@@ -136,9 +131,8 @@ namespace Zoranner.ProjectWatcher
                             if (!(Enum.GetNames(typeof(StreamingAssetsDirectory)) as IList).Contains(childInfo.Name))
                             {
                                 //childInfo.Delete(true);
-                                Debug.LogError(string.Format(
-                                    "发现不规范资源目录[Assets/StreamingAssets/{0}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。",
-                                    childInfo.Name));
+                                Debug.LogError(
+                                    $"发现不规范资源目录[Assets/StreamingAssets/{childInfo.Name}]，为方便项目维护，建议规范化存放资源，或通过ProjectWatcher脚本配置目录结构。");
                             }
                         }
                     }

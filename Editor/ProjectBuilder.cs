@@ -41,12 +41,10 @@ namespace Zoranner.ProjectWatcher
             {
 #if WATCH_DOG
                 // Fix ProjectSetting
-                PlayerSettings.d3d11FullscreenMode = D3D11FullscreenMode.FullscreenWindow;
-                PlayerSettings.macFullscreenMode = MacFullscreenMode.FullscreenWindow;
+                PlayerSettings.fullScreenMode = FullScreenMode.FullScreenWindow;
                 PlayerSettings.defaultIsNativeResolution = true;
                 PlayerSettings.runInBackground = true;
                 PlayerSettings.captureSingleScreen = true;
-                PlayerSettings.displayResolutionDialog = ResolutionDialogSetting.Disabled;
                 PlayerSettings.usePlayerLog = true;
                 PlayerSettings.resizableWindow = true;
                 PlayerSettings.visibleInBackground = true;

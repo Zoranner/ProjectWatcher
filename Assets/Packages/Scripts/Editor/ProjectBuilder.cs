@@ -24,7 +24,7 @@ namespace Zoranner.ProjectWatcher
 #if WATCH_DOG
         private static readonly string _DataPath = Application.dataPath;
 #else
-    private const string SYMBOLS_DEFINE = "WATCH_DOG";
+        private const string SYMBOLS_DEFINE = "WATCH_DOG";
 #endif
 
         static ProjectBuilder()
@@ -69,11 +69,12 @@ namespace Zoranner.ProjectWatcher
                 PlayerSettings.iOS.showActivityIndicatorOnLoading = iOSShowActivityIndicatorOnLoading.DontShow;
                 PlayerSettings.use32BitDisplayBuffer = true;
                 PlayerSettings.Android.showActivityIndicatorOnLoading = AndroidShowActivityIndicatorOnLoading.DontShow;
+
                 new Thread(() =>
                 {
                     foreach (var subType in Enum.GetNames(typeof(MainDirectory)))
                     {
-                        var subDire = string.Format(@"{0}\{1}", _DataPath, subType);
+                        var subDire = string.Format("{0}/{1}", _DataPath, subType);
                         if (!Directory.Exists(subDire))
                         {
                             Directory.CreateDirectory(subDire);
@@ -82,7 +83,7 @@ namespace Zoranner.ProjectWatcher
 
                     foreach (var subType in Enum.GetNames(typeof(ArtsDirectory)))
                     {
-                        var subDire = string.Format(@"{0}\Arts\{1}", _DataPath, subType);
+                        var subDire = string.Format("{0}/Arts/{1}", _DataPath, subType);
                         if (!Directory.Exists(subDire))
                         {
                             Directory.CreateDirectory(subDire);
@@ -91,7 +92,7 @@ namespace Zoranner.ProjectWatcher
 
                     foreach (var subType in Enum.GetNames(typeof(ResourcesDirectory)))
                     {
-                        var subDire = string.Format(@"{0}\Resources\{1}", _DataPath, subType);
+                        var subDire = string.Format("{0}/Resources/{1}", _DataPath, subType);
                         if (!Directory.Exists(subDire))
                         {
                             Directory.CreateDirectory(subDire);
@@ -100,7 +101,7 @@ namespace Zoranner.ProjectWatcher
 
                     foreach (var subType in Enum.GetNames(typeof(ScriptsDirectory)))
                     {
-                        var subDire = string.Format(@"{0}\Scripts\{1}", _DataPath, subType);
+                        var subDire = string.Format("{0}/Scripts/{1}", _DataPath, subType);
                         if (!Directory.Exists(subDire))
                         {
                             Directory.CreateDirectory(subDire);
@@ -109,7 +110,7 @@ namespace Zoranner.ProjectWatcher
 
                     foreach (var subType in Enum.GetNames(typeof(MasterDirectory)))
                     {
-                        var subDire = string.Format(@"{0}\Scripts\Master\{1}", _DataPath, subType);
+                        var subDire = string.Format("{0}/Scripts/Master/{1}", _DataPath, subType);
                         if (!Directory.Exists(subDire))
                         {
                             Directory.CreateDirectory(subDire);
@@ -118,7 +119,7 @@ namespace Zoranner.ProjectWatcher
 
                     foreach (var subType in Enum.GetNames(typeof(StreamingAssetsDirectory)))
                     {
-                        var subDire = string.Format(@"{0}\StreamingAssets\{1}", _DataPath, subType);
+                        var subDire = string.Format("{0}/StreamingAssets/{1}", _DataPath, subType);
                         if (!Directory.Exists(subDire))
                         {
                             Directory.CreateDirectory(subDire);
